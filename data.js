@@ -123,5 +123,6 @@ window.XRSTAND = {
   ],
 
   links: {
+    contact: "contact@xrstandards.org",
   },
 };
