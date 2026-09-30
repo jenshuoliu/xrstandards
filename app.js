@@ -63,7 +63,7 @@
   $("event-filter").innerHTML =
     `<option value="all">All events</option>` +
     events.filter((e) => countFor(e.id)).map((e) => `<option value="${esc(e.id)}">${esc(e.short)}</option>`).join("") +
-    `<option value="none">General</option>`;
+    (D.resources.some((r) => !r.event) ? `<option value="none">General</option>` : "");
 
   function render() {
     const q = state.q.toLowerCase();

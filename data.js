@@ -120,12 +120,6 @@ window.XRSTAND = {
     { type: "paper", event: "ismar2025", title: "Toward a Human-Centered Framework for Standardization in eXtended Reality: Development, Measurement, and Evaluation", authors: "Gkoumas, Triantafyllidis, Rouchitsas" },
     { type: "paper", event: "ismar2025", title: "Mutual Space Representation Standardization for Mixed and Augmented Reality Remote Collaboration", authors: "Kim, Woo" },
     { type: "paper", event: "ismar2025", title: "No Terminology, No Standards, No Future: Semantic Interoperability for Bridging Stakeholders in XR", authors: "Kurata" },
-
-    // ---- Standards ----
-    { type: "standard", title: "OpenXR", authors: "Khronos Group", url: "https://www.khronos.org/openxr/" },
-    { type: "standard", title: "WebXR Device API", authors: "W3C", url: "https://www.w3.org/TR/webxr/" },
-    { type: "standard", title: "VRM (avatar file format)", authors: "VRM Consortium", url: "https://vrm.dev/en/" },
-    { type: "standard", title: "Metaverse Standards Forum", authors: "Industry forum", url: "https://metaverse-standards.org/" },
   ],
 
   links: {
