@@ -52,6 +52,9 @@ Open `index.html` directly in a browser, or run `npx serve .`.
    `xrstandards.org` to prevent domain takeover.
 
 Notes:
+- `xrstandards.net` is also owned; in Cloudflare it is proxied (orange cloud,
+  dummy A `192.0.2.1`) with a Redirect Rule sending everything 301 to
+  `https://xrstandards.org` + path.
 - The yearly event pages stay at their `xrstand-standardization-committee.github.io/...`
   URLs; this site links to them.
 - To hand the site over to the committee later: repo Settings → Transfer to
