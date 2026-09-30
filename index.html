@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XRStand — Standardization in XR</title>
+  <meta name="description" content="XRStand: events, papers, standards and recordings from the IEEE ISMAR Standardization Committee.">
+  <link rel="icon" href="https://xrstand-standardization-committee.github.io/ISMAR-26-Tutorial/images/xrstand-logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">
+        <img src="https://xrstand-standardization-committee.github.io/ISMAR-26-Tutorial/images/xrstand-logo.png" alt="XRStand" onerror="this.replaceWith('XRStand')">
+      </a>
+      <nav>
+        <a href="#events">Events</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">IEEE ISMAR Standardization Committee</p>
+        <h1>Standardization in Extended Reality</h1>
+        <p class="lead">XRStand brings together researchers, industry and standards bodies to discuss interoperability, reproducibility and open science in XR. This site collects every edition, together with papers, standards and recordings.</p>
+        <div id="next-event" class="next-event"></div>
+      </div>
+    </section>
+
+    <section id="events" class="wrap section">
+      <h2>Events</h2>
+      <div id="event-list" class="event-list"></div>
+    </section>
+
+    <section id="resources" class="wrap section">
+      <h2>Resources</h2>
+      <div class="filters">
+        <div id="type-filters" class="chips" role="group" aria-label="Filter by type"></div>
+        <div class="filter-row">
+          <select id="year-filter" aria-label="Filter by year"></select>
+          <input id="search" type="search" placeholder="Search title or author…" aria-label="Search resources">
+        </div>
+      </div>
+      <ul id="resource-list" class="resource-list"></ul>
+      <p id="empty" class="empty" hidden>No matching resources.</p>
+    </section>
+
+    <section id="about" class="wrap section about">
+      <h2>About</h2>
+      <p>XRStand is organized by the Standardization Committee of IEEE ISMAR. Want to share a paper, standard or recording? Get in touch.</p>
+      <p id="about-links"></p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© <span id="year"></span> XRStand · xrstandards.net</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
