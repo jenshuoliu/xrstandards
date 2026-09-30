@@ -1,4 +1,4 @@
-﻿# xrstandards.net
+# xrstandards.org
 
 Hub site for XRStand (IEEE ISMAR Standardization Committee): links to every
 year's event page plus papers, standards, talks and recordings.
@@ -32,7 +32,7 @@ Open `index.html` directly in a browser, or run `npx serve .`.
 1. Create a public repo `xrstandards` under your GitHub account
    (`so15963`) and push these files.
 2. Repo → Settings → Pages → Source: *Deploy from a branch*, `main` / root.
-3. Settings → Pages → Custom domain: `xrstandards.net` (the `CNAME` file
+3. Settings → Pages → Custom domain: `xrstandards.org` (the `CNAME` file
    already contains it). Tick **Enforce HTTPS** once the certificate is issued.
 4. At the domain registrar, set DNS:
 
@@ -49,7 +49,7 @@ Open `index.html` directly in a browser, or run `npx serve .`.
    | CNAME | www  | `so15963.github.io` |
 
 5. (Recommended) Account Settings → Pages → *Verify a domain* for
-   `xrstandards.net` to prevent domain takeover.
+   `xrstandards.org` to prevent domain takeover.
 
 Notes:
 - The yearly event pages stay at their `xrstand-standardization-committee.github.io/...`
