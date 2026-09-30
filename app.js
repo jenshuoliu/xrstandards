@@ -123,5 +123,6 @@
   ]
     .filter(Boolean)
     .join(" · ");
+  $("about-contact").hidden = !$("about-links").innerHTML;
   $("year").textContent = new Date().getFullYear();
 })();

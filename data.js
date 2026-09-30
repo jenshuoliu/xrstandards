@@ -123,6 +123,5 @@ window.XRSTAND = {
   ],
 
   links: {
-    contact: "M-ismar-standard-ml@aist.go.jp",
   },
 };
