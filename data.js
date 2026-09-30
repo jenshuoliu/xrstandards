@@ -24,7 +24,7 @@ window.XRSTAND = {
       committee: "https://www.ieeeismar.net/2026/committee/standardization/",
       summary:
         "System-level standard APIs such as OpenXR, study reproduction methodologies in XR research, and experiment and data-sharing infrastructure.",
-      people: "Organizers: Takeshi Kurata, Jen-Shuo Liu",
+      people: "Organized by the IEEE ISMAR 2026 Standardization Committee",
     },
     {
       id: "ieeevr2026",
@@ -38,7 +38,7 @@ window.XRSTAND = {
       summary:
         "Reproducibility gaps in VR research, open standards such as OpenXR versus proprietary ecosystems, and whether standardization should mandate benchmarks.",
       people:
-        "Moderator: Jen-Shuo Liu · Panelists: Neil Trevett, Tim Weissker, J. Edward Swan II, Richard Skarbez",
+        "Organized by the IEEE VR 2026 XR/VR Standardization Committee · Moderator: Jen-Shuo Liu · Panelists: Neil Trevett, Tim Weissker, J. Edward Swan II, Richard Skarbez",
     },
     {
       id: "ismar2025",
@@ -51,7 +51,7 @@ window.XRSTAND = {
       committee: "https://www.ieeeismar.net/2025/committee/standardization/",
       summary:
         "Keynote on virtual worlds interoperability, 10 accepted papers (lightning talks and posters), and invited talks on the Reality–Virtuality Continuum and metaverse platforms.",
-      people: "General Chairs: Yahya (Yohan) Hmaiti, Ryosuke Ichikari, Seonji Kim",
+      people: "Organized by the IEEE ISMAR 2025 Standardization Committee · General Chairs: Yahya (Yohan) Hmaiti, Ryosuke Ichikari, Seonji Kim",
     },
   ],
 
