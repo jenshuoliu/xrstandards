@@ -125,3 +125,5 @@ nav a:hover { color: var(--fg); text-decoration: none; }
 }
 .event-year span { display: block; margin-top: 6px; font-size: .8rem; font-weight: 600; color: var(--muted); letter-spacing: .02em; }
 .about h3 { font-size: 1.1rem; margin: 28px 0 8px; }
+.contact-card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft); padding: 4px 20px; max-width: 680px; }
+.contact-email { font-size: 1.05rem; font-weight: 600; }
