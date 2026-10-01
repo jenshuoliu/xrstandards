@@ -124,3 +124,4 @@ nav a:hover { color: var(--fg); text-decoration: none; }
   .tag { justify-self: start; }
 }
 .event-year span { display: block; margin-top: 6px; font-size: .8rem; font-weight: 600; color: var(--muted); letter-spacing: .02em; }
+.about h3 { font-size: 1.1rem; margin: 28px 0 8px; }
