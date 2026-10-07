@@ -127,3 +127,6 @@ nav a:hover { color: var(--fg); text-decoration: none; }
 .about h3 { font-size: 1.1rem; margin: 28px 0 8px; }
 .contact-card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft); padding: 4px 20px; max-width: 680px; }
 .contact-email { font-size: 1.05rem; font-weight: 600; }
+.watch { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 6px; font-size: .75rem; font-weight: 600; vertical-align: 2px; background: #fde8e8; color: #b42318; white-space: nowrap; }
+.watch:hover { text-decoration: none; filter: brightness(.97); }
+@media (prefers-color-scheme: dark) { .watch { background: #3a1d1d; color: #ff9b91; } }

@@ -68,7 +68,9 @@
   function render() {
     const q = state.q.toLowerCase();
     const items = D.resources.filter((r) => {
-      if (state.type !== "all" && r.type !== state.type) return false;
+      if (state.type === "recording" && (r.type === "recording" || r.video)) {
+        // talks with a video also count as recordings
+      } else if (state.type !== "all" && r.type !== state.type) return false;
       if (state.event === "none" && r.event) return false;
       if (state.event !== "all" && state.event !== "none" && r.event !== state.event) return false;
       if (q && !`${r.title} ${r.authors || ""}`.toLowerCase().includes(q)) return false;
@@ -80,7 +82,7 @@
       <li class="resource">
         <span class="tag tag-${esc(r.type)}">${esc(TYPES[r.type] ? TYPES[r.type].replace(/s$/, "") : r.type)}</span>
         <div>
-          <div class="r-title">${r.url ? `<a href="${esc(r.url)}">${esc(r.title)}</a>` : esc(r.title)}</div>
+          <div class="r-title">${r.url ? `<a href="${esc(r.url)}">${esc(r.title)}</a>` : esc(r.title)}${r.video ? ` <a class="watch" href="${esc(r.video)}">▶ Video</a>` : ""}</div>
           <div class="muted small">${[r.authors, byId[r.event] ? byId[r.event].short : ""].filter(Boolean).map(esc).join(" · ")}</div>
         </div>
       </li>`

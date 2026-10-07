@@ -10,6 +10,8 @@
  * resources: papers / standards / recordings / slides / talks
  *   type:   "paper" | "talk" | "recording" | "slides" | "standard"
  *   event:  optional event id this resource belongs to
+ *   video:  optional recording link for a talk (adds a "▶ Video" link and
+ *           makes it show up under the Recordings filter)
  */
 window.XRSTAND = {
   events: [
@@ -63,6 +65,13 @@ window.XRSTAND = {
       title: "XRStand 2025 Workshop — full recording",
       url: "https://youtu.be/6TGDVTBICNc",
     },
+    {
+      type: "recording",
+      event: "ismar2026",
+      title: "XRStand 2026 Tutorial — Opening and Tutorial Overview",
+      authors: "Takeshi Kurata, Jen-Shuo Liu",
+      url: "https://youtu.be/5fh9PxWzvXA",
+    },
 
     // ---- Talks & panels ----
     {
@@ -70,18 +79,21 @@ window.XRSTAND = {
       event: "ismar2026",
       title: "Towards Unified Standards for Replicable and Generalizable User Studies in Extended Reality",
       authors: "Tim Weissker",
+      video: "https://youtu.be/Aafobti21Sg",
     },
     {
       type: "talk",
       event: "ismar2026",
       title: "API Standards for Immersive Displays",
       authors: "William R. Sherman",
+      video: "https://youtu.be/c7wUml1yrCw",
     },
     {
       type: "talk",
       event: "ismar2026",
       title: "Toward Reproducible and Interoperable XR Research: Perspectives from VERA",
       authors: "Greg Welch, Ali Haskins, Corey Clements",
+      video: "https://youtu.be/aEd23rIAF0o",
     },
     {
       type: "talk",
