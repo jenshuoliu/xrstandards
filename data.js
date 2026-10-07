@@ -10,8 +10,8 @@
  * resources: papers / standards / recordings / slides / talks
  *   type:   "paper" | "talk" | "recording" | "slides" | "standard"
  *   event:  optional event id this resource belongs to
- *   video:  optional recording link for a talk (adds a "▶ Video" link and
- *           makes it show up under the Recordings filter)
+ *   video:  YouTube/recording link (shown as a "▶ Video" link; talks with a
+ *           video also show up under the Recordings filter)
  */
 window.XRSTAND = {
   events: [
@@ -63,14 +63,14 @@ window.XRSTAND = {
       type: "recording",
       event: "ismar2025",
       title: "XRStand 2025 Workshop — full recording",
-      url: "https://youtu.be/6TGDVTBICNc",
+      video: "https://youtu.be/6TGDVTBICNc",
     },
     {
       type: "recording",
       event: "ismar2026",
       title: "XRStand 2026 Tutorial — Opening and Tutorial Overview",
       authors: "Takeshi Kurata, Jen-Shuo Liu",
-      url: "https://youtu.be/5fh9PxWzvXA",
+      video: "https://youtu.be/5fh9PxWzvXA",
     },
 
     // ---- Talks & panels ----
