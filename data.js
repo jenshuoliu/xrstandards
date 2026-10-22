@@ -22,7 +22,7 @@ window.XRSTAND = {
       format: "Tutorial",
       venue: "IEEE ISMAR 2026",
       date: "2026-10-05",
-      url: "https://xrstand-standardization-committee.github.io/ISMAR-26-Tutorial/",
+      url: "ismar2026/",
       committee: "https://www.ieeeismar.net/2026/committee/standardization/",
       summary:
         "System-level standard APIs such as OpenXR, study reproduction methodologies in XR research, and experiment and data-sharing infrastructure.",
@@ -35,7 +35,7 @@ window.XRSTAND = {
       format: "Panel",
       venue: "IEEE VR 2026",
       date: "2026-03-25",
-      url: "https://ieeevr.org/2026/program/panels/",
+      url: "ieeevr2026/",
       committee: "https://ieeevr.org/2026/committees/XR%E2%81%84VR%20Standardization%20Committee/",
       summary:
         "Reproducibility gaps in VR research, open standards such as OpenXR versus proprietary ecosystems, and whether standardization should mandate benchmarks.",
@@ -49,7 +49,7 @@ window.XRSTAND = {
       format: "Workshop",
       venue: "IEEE ISMAR 2025",
       date: "2025-10-08",
-      url: "https://xrstand-standardization-committee.github.io/ISMAR2025--XRStand2025_Workshop/",
+      url: "ismar2025/",
       committee: "https://www.ieeeismar.net/2025/committee/standardization/",
       summary:
         "Keynote on virtual worlds interoperability, 10 accepted papers (lightning talks and posters), and invited talks on the Reality–Virtuality Continuum and metaverse platforms.",

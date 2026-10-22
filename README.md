@@ -55,8 +55,11 @@ Notes:
 - `xrstandards.net` is also owned; in Cloudflare it is proxied (orange cloud,
   dummy A `192.0.2.1`) with a Redirect Rule sending everything 301 to
   `https://xrstandards.org` + path.
-- The yearly event pages stay at their `xrstand-standardization-committee.github.io/...`
-  URLs; this site links to them.
+- Event pages live in this repo as `/<conference><year>/` (e.g. `ismar2025/`,
+  `ieeevr2026/`, `ismar2026/`). New events follow the same naming.
+- The original event repos in the `XRStand-Standardization-Committee` GitHub
+  org are linked from the IEEE ISMAR / IEEE VR conference websites. Never
+  delete or rename them; their `index.html` redirects here.
 - To hand the site over to the committee later: repo Settings → Transfer to
   the organization, then re-enter the custom domain under Pages and move the
   domain verification to the org.

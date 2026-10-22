@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="XRStand 2026: XR Standards and Open Science Practices.">
+    <meta name="theme-color" content="#f4e8d4">
+    <title>XRStand 2026: XR Standards and Open Science Practices</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #f4e8d4;
+            --blue: #3a8bf3;
+            --brown: #3d1209;
+            --ink: #333333;
+            --white: #ffffff;
+            --page-width: 1000px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--cream);
+            font-family: "Poppins", Arial, sans-serif;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 20;
+            padding: 10px 14px;
+            color: var(--white);
+            background: var(--brown);
+            transform: translateY(-160%);
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        .site-header {
+            background: var(--white);
+        }
+
+        .header-inner {
+            width: min(calc(100% - 40px), 1200px);
+            min-height: 92px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .brand {
+            display: block;
+        }
+
+        .brand img {
+            width: 210px;
+            height: auto;
+        }
+
+        .committee-link {
+            color: var(--brown);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .committee-link:hover,
+        .committee-link:focus-visible {
+            color: var(--blue);
+        }
+
+        .hero {
+            position: relative;
+            min-height: 400px;
+            display: grid;
+            place-items: center;
+            padding: 54px 20px;
+            overflow: hidden;
+            text-align: center;
+            background: #33495c url("images/ismar-2026-hero.jpg") center 46% / cover no-repeat;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(44, 68, 90, 0.64);
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 1;
+            max-width: 920px;
+            margin: 0;
+            color: var(--white);
+            font-size: clamp(2.1rem, 4.2vw, 3.25rem);
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+        }
+
+        .page-content {
+            width: min(calc(100% - 40px), var(--page-width));
+            margin: 0 auto;
+            padding: 52px 0 72px;
+        }
+
+        .page-content h2 {
+            margin: 0 0 22px;
+            color: var(--blue);
+            font-size: 1.65rem;
+            font-weight: 600;
+        }
+
+        .page-content p {
+            margin: 0 0 24px;
+            font-size: 1rem;
+        }
+
+        .focus-areas {
+            margin: 28px 0;
+            padding: 0;
+            list-style: none;
+            counter-reset: focus-area;
+        }
+
+        .focus-areas li {
+            position: relative;
+            min-height: 44px;
+            padding: 9px 0 9px 58px;
+            counter-increment: focus-area;
+        }
+
+        .focus-areas li + li {
+            margin-top: 8px;
+        }
+
+        .focus-areas li::before {
+            content: counter(focus-area);
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            color: var(--white);
+            background: var(--blue);
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .presentations {
+            margin-top: 56px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(61, 18, 9, 0.18);
+        }
+
+        .schedule {
+            margin-top: 56px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(61, 18, 9, 0.18);
+        }
+
+        .schedule-date {
+            margin: -8px 0 20px;
+            color: var(--brown);
+            font-weight: 600;
+        }
+
+        .schedule-table-wrap {
+            overflow-x: auto;
+        }
+
+        .schedule-table {
+            width: 100%;
+            min-width: 560px;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 12px 16px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid rgba(61, 18, 9, 0.14);
+        }
+
+        .schedule-table th {
+            color: var(--brown);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .schedule-table td:first-child,
+        .schedule-table th:first-child {
+            white-space: nowrap;
+            color: var(--brown);
+            font-weight: 600;
+        }
+
+        .talk + .talk {
+            margin-top: 52px;
+            padding-top: 44px;
+            border-top: 1px solid rgba(61, 18, 9, 0.14);
+        }
+
+        .talk-number {
+            margin-bottom: 8px;
+            color: var(--brown);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .page-content .talk h3 {
+            margin: 0 0 12px;
+            color: var(--brown);
+            font-size: 1.35rem;
+            line-height: 1.4;
+        }
+
+        .page-content .talk h4 {
+            margin: 34px 0 16px;
+            color: var(--blue);
+            font-size: 1.08rem;
+        }
+
+        .page-content .presenter {
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .page-content .presenter-bio {
+            margin-bottom: 22px;
+        }
+
+        .page-content .forthcoming {
+            color: #5f5f5f;
+            font-style: italic;
+        }
+
+        .committee-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-top: 14px;
+            padding: 11px 22px;
+            color: var(--white);
+            background: var(--blue);
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: transform 180ms ease, background-color 180ms ease;
+        }
+
+        .committee-button:hover,
+        .committee-button:focus-visible {
+            background: #246fce;
+            transform: translateY(-2px);
+        }
+
+        .committee-button svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--blue);
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 640px) {
+            .header-inner {
+                width: min(calc(100% - 28px), 1200px);
+                min-height: 76px;
+                gap: 18px;
+            }
+
+            .brand img {
+                width: 148px;
+            }
+
+            .committee-link {
+                font-size: 0.72rem;
+                text-align: right;
+            }
+
+            .hero {
+                min-height: 280px;
+                padding: 42px 18px;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.8rem, 8.2vw, 2.45rem);
+            }
+
+            .page-content {
+                width: min(calc(100% - 32px), var(--page-width));
+                padding: 40px 0 54px;
+            }
+
+            .page-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .presentations {
+                margin-top: 42px;
+                padding-top: 36px;
+            }
+
+            .talk + .talk {
+                margin-top: 40px;
+                padding-top: 34px;
+            }
+
+            .page-content .talk h3 {
+                font-size: 1.18rem;
+            }
+
+            .schedule {
+                margin-top: 42px;
+                padding-top: 36px;
+            }
+
+            .schedule-table th,
+            .schedule-table td {
+                padding: 10px 12px;
+            }
+
+            .page-content p,
+            .focus-areas {
+                font-size: 0.94rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            * {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#" aria-label="XRStand 2026 home">
+                <img src="images/xrstand-logo.png" alt="XRStand">
+            </a>
+            <a class="committee-link" href="https://www.ieeeismar.net/2026/committee/standardization/" target="_blank" rel="noopener noreferrer">
+                Standardization Committee
+            </a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="page-title">
+            <h1 id="page-title">XRStand 2026: XR Standards and Open Science Practices</h1>
+        </section>
+
+        <section class="page-content" aria-labelledby="abstract-title">
+            <p><strong>Update (Oct 2026):</strong> Recordings and slides from the tutorial are now available on the XRStand portal: <a href="https://xrstandards.org/">https://xrstandards.org/</a></p>
+            <h2 id="abstract-title">Abstract</h2>
+            <p>
+                As XR technology matures, standardization and open science have become critical to bridging hardware, software, and academic research. This tutorial covers key aspects of this movement, including:
+            </p>
+            <ol class="focus-areas">
+                <li>system-level standard APIs like OpenXR</li>
+                <li>methodologies for study reproduction in XR research</li>
+                <li>infrastructures for experiments and data sharing</li>
+            </ol>
+            <p>
+                Attendees will gain a comprehensive understanding of how to leverage and contribute to these emerging standardization processes and practices in the XR field.
+            </p>
+            <a class="committee-button" href="https://www.ieeeismar.net/2026/committee/standardization/" target="_blank" rel="noopener noreferrer">
+                Standardization Committee
+                <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M6 14 14 6M8 6h6v6"></path>
+                </svg>
+            </a>
+
+            <div class="schedule" aria-labelledby="schedule-title">
+                <h2 id="schedule-title">Tentative Schedule</h2>
+                <p class="schedule-date">Monday, October 5, 2026</p>
+                <div class="schedule-table-wrap">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Time</th>
+                                <th scope="col">Session</th>
+                                <th scope="col">Presenter(s)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>08:30&ndash;08:40</td>
+                                <td>Opening and Welcome</td>
+                                <td>Takeshi Kurata &amp; Jen-Shuo Liu</td>
+                            </tr>
+                            <tr>
+                                <td>08:40&ndash;08:45</td>
+                                <td>Tutorial Overview</td>
+                                <td>Jen-Shuo Liu</td>
+                            </tr>
+                            <tr>
+                                <td>08:45&ndash;09:45</td>
+                                <td>Towards Unified Standards for Replicable and Generalizable User Studies in Extended Reality</td>
+                                <td>Tim Weissker</td>
+                            </tr>
+                            <tr>
+                                <td>09:45&ndash;10:30</td>
+                                <td>Coffee Break</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td>10:30&ndash;11:15</td>
+                                <td>API Standards for Immersive Displays</td>
+                                <td>William R. Sherman</td>
+                            </tr>
+                            <tr>
+                                <td>11:15&ndash;12:00</td>
+                                <td>Toward Reproducible and Interoperable XR Research: Perspectives from VERA</td>
+                                <td>Greg Welch, Ali Haskins, and Corey Clements</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="presentations" aria-labelledby="presentations-title">
+                <h2 id="presentations-title">Presentations</h2>
+
+                <article class="talk">
+                    <div class="talk-number">Talk 1</div>
+                    <h3>Towards Unified Standards for Replicable and Generalizable User Studies in Extended Reality</h3>
+                    <p class="presenter">Tim Weissker, Visual Computing Institute, RWTH Aachen University</p>
+                    <p>
+                        The number of paper submissions on XR systems and interaction techniques has risen drastically in the last years. While this positive trend reflects a growing and vibrant research community, the academic system also increasingly incentivizes the rapid publication of research findings to obtain a degree, secure funding, and get promoted. Especially for early-career researchers, this creates a tension between producing valid and reliable results for one project and moving on to the next. This carries the risk that one might, voluntarily or involuntarily, reach conclusions that are neither generalizable nor reproducible.
+                    </p>
+                    <p>
+                        In this talk, we take a closer look at the heart of decision-making in XR interaction design: the realization and evaluation of empirical user studies, where many seemingly minor design decisions can influence the overall conclusions drawn from the study. We look at selected quality criteria contributing to the reproducibility of empirical findings and interactively discuss minimum standards for future user studies to be published in the top-tier conferences of our field.
+                    </p>
+                </article>
+
+                <article class="talk">
+                    <div class="talk-number">Talk 2</div>
+                    <h3>API Standards for Immersive Displays</h3>
+                    <p class="presenter">Bill Sherman, National Institute of Standards and Technology, USA</p>
+                    <p>
+                        The focus of this tutorial is to compare the two modern XR APIs designed for web-based (WebXR) and non-browser applications (OpenXR). Our discussion will include the scope of each standard, and how the standards have evolved (and continue to evolve). We will take a quick look at the evolution of open APIs for the VR/AR/XR community, and also glimpse into the future of what new features are on the horizon.
+                    </p>
+                </article>
+
+                <article class="talk">
+                    <div class="talk-number">Talk 3</div>
+                    <h3>Toward Reproducible and Interoperable XR Research: Perspectives from VERA</h3>
+                    <p>
+                        XR experiments generate rich streams of behavioral and system data, but those data are typically represented, processed, and analyzed for the particular experiment that generated them. What might become possible if XR research infrastructure were designed not only to support individual experiments, but also to enable analyses that had not yet been conceived?
+                    </p>
+                    <p>
+                        Using ongoing work in the Virtual Experience Research Accelerator (VERA) as a starting point, we will explore three connected aspects of this question. We begin with pragmatic approaches to consistently representing data across XR experiments&mdash;not as proposed standards, but as a foundation for considering what consistency can enable. We then explore opportunities for creating reusable and comparable information from XR data, including standardized behavioral measures, controlled and provenance-preserving derivatives of raw data, continuous representations of sampled motion, and segmentation of experiences into meaningful and potentially comparable episodes. Such capabilities could ultimately enable new forms of analysis across participants, experiments, and studies.
+                    </p>
+                    <p>
+                        Finally, we consider how these ideas might evolve from project-specific mechanisms into shared research infrastructure. Rather than proposing a finished architecture or set of standards, we hope to identify opportunities for standardization and engage the XR community in discussing what should be common, what should remain flexible, and how shared infrastructure could support more reusable, comparable, and extensible XR research.
+                    </p>
+
+                    <h4>Presenters</h4>
+                    <p class="presenter-bio">
+                        <strong>Greg Welch, Ph.D.</strong>, is a Pegasus Professor and the AdventHealth Endowed Chair in Healthcare Simulation at the University of Central Florida, with appointments in Computer Science and the Institute for Simulation &amp; Training. A computer scientist and engineer, his research interests include human-computer interaction, human motion tracking, virtual and augmented reality, and related applications. He is the Lead PI of the NSF-supported Virtual Experience Research Accelerator (VERA), a research infrastructure project aimed at enabling large-scale, reproducible XR research. Welch is a Fellow of the IEEE and the National Academy of Inventors and a member of the IEEE VGTC Virtual Reality Academy. Welch earned his M.S. and Ph.D. in Computer Science from the University of North Carolina at Chapel Hill, and previously worked for NASA and Northrop Grumman.
+                    </p>
+                    <p class="presenter-bio">
+                        <strong>Ali Haskins, Ph.D.</strong>, is the Director of Development and Operations for the NSF-supported Virtual Experience Research Accelerator (VERA) at the University of Central Florida. Her expertise spans human-computer interaction, virtual reality, human factors, user experience and design, and human-subjects research. As VERA&rsquo;s DDO, she leads development and operations across the project&rsquo;s technical systems, research processes, policies, and community engagement. Haskins earned her B.S., M.S., and Ph.D. in Industrial &amp; Systems Engineering from Virginia Tech and has experience in academic research and teaching, user experience consulting, and research administration.
+                    </p>
+                    <p class="presenter-bio">
+                        <strong>Corey Clements</strong> is an Associate Lead Software Engineer for the NSF-supported Virtual Experience Research Accelerator (VERA) at the University of Central Florida. His work focuses on the design and development of software systems for XR research, including tools that enable researchers to build, deploy, and conduct large-scale remote experiments. Clements has been instrumental in the development and implementation of the VERA platform, with extensive contributions across its software systems, Unity integration, XR device support, and research infrastructure. He earned his B.S. and M.S. in Computer Science from UCF.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
