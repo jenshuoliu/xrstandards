@@ -30,7 +30,7 @@ Open `index.html` directly in a browser, or run `npx serve .`.
 ## Deployment (one-time)
 
 1. Create a public repo `xrstandards` under your GitHub account
-   (`so15963`) and push these files.
+   (`jenshuoliu`) and push these files.
 2. Repo → Settings → Pages → Source: *Deploy from a branch*, `main` / root.
 3. Settings → Pages → Custom domain: `xrstandards.org` (the `CNAME` file
    already contains it). Tick **Enforce HTTPS** once the certificate is issued.
@@ -46,7 +46,7 @@ Open `index.html` directly in a browser, or run `npx serve .`.
    | AAAA  | @    | 2606:50c0:8001::153      |
    | AAAA  | @    | 2606:50c0:8002::153      |
    | AAAA  | @    | 2606:50c0:8003::153      |
-   | CNAME | www  | `so15963.github.io` |
+   | CNAME | www  | `jenshuoliu.github.io` |
 
 5. (Recommended) Account Settings → Pages → *Verify a domain* for
    `xrstandards.org` to prevent domain takeover.
