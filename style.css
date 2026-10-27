@@ -177,13 +177,8 @@ nav a:hover { color: var(--fg); text-decoration: none; }
 .implications { margin-top: 24px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft); }
 .implications-title { margin: 0 0 12px; font-weight: 700; text-align: center; }
 .implications-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
-.impl {
-  font: inherit; font-size: .88rem; font-weight: 600; color: var(--accent); background: var(--bg);
-  border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer;
-}
-.impl:hover { border-color: var(--accent); text-decoration: none; }
-.impl.goal { color: var(--fg); cursor: default; border-style: dashed; }
-.impl-note { margin-left: 4px; font-size: .7rem; color: var(--muted); }
+.impl { font-size: .88rem; font-weight: 600; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; }
+.impl.goal { border-style: dashed; }
 .impl-plus, .impl-arrow { color: var(--muted); font-weight: 700; }
 
 @media (max-width: 860px) {

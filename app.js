@@ -177,9 +177,6 @@
     const b = e.target.closest(".theme-card");
     if (b) showTheme(b.dataset.theme, false);
   });
-  document.querySelectorAll("button.impl[data-theme]").forEach((b) =>
-    b.addEventListener("click", () => showTheme(b.dataset.theme, true))
-  );
 
   // ---- About / footer ----
   const L = D.links || {};
