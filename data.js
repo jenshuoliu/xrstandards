@@ -10,6 +10,9 @@
  * resources: papers / standards / recordings / slides / talks
  *   type:   "paper" | "talk" | "recording" | "slides" | "standard"
  *   event:  optional event id this resource belongs to
+ *   venue / venueUrl: for members' work presented outside XRStand events
+ *           (shown as "Presented at …"; listed under "Other venues")
+ *   slides: link to slides (shown as a "Slides" link)
  *   themes: ids from `themes` below (used by the theme map)
  *   video:  YouTube/recording link (shown as a "▶ Video" link; talks with a
  *           video also show up under the Recordings filter)
@@ -134,6 +137,17 @@ window.XRSTAND = {
     },
 
     // ---- Papers (XRStand 2025) — add `url` when PDFs / DOIs are available ----
+    // ---- Members' work presented elsewhere (not XRStand events) ----
+    {
+      type: "paper",
+      title: "XR is XR: Revisiting the Evolution and Governance of XR-Related Terminology",
+      authors: "Takeshi Kurata",
+      venue: "XWORLDS'26 (IEEE ISMAR 2026 workshop)",
+      venueUrl: "https://websites.fraunhofer.de/xworlds26/",
+      slides: "https://websites.fraunhofer.de/xworlds26/XRisXR_Kurata_ISMAR2026_1006.pdf",
+      themes: ["terminology"],
+    },
+
     { type: "paper", event: "ismar2025", title: "Designing xDR Challenge 2025 to Evaluate Localization Performance of Smartphone with Navigation Robot for People with Visual Impairment", authors: "Ogiso, Ichikari, Sato, Sato, Miura, Kourogi, Okuma, Tanabe, Kurata", themes: ["reproducibility", "emerging"] },
     { type: "paper", event: "ismar2025", title: "VRM: Concept and Implementation of an Application-Interoperable Avatar Format", authors: "Iwaki, Kurata", themes: ["interoperability"] },
     { type: "paper", event: "ismar2025", title: "Standardization for Social VR: Balancing Expressive Diversity, Interoperability, and Creator Participation", authors: "Kunitake, Song", themes: ["interoperability", "emerging"] },

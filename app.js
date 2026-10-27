@@ -57,8 +57,12 @@
       <li class="resource">
         <span class="tag tag-${esc(r.type)}">${esc(TYPES[r.type] ? TYPES[r.type].replace(/s$/, "") : r.type)}</span>
         <div>
-          <div class="r-title">${r.url ? `<a href="${esc(r.url)}">${esc(r.title)}</a>` : esc(r.title)}${r.video ? ` <a class="watch" href="${esc(r.video)}">▶ Video</a>` : ""}</div>
-          <div class="muted small">${[r.authors, byId[r.event] ? byId[r.event].short : ""].filter(Boolean).map(esc).join(" · ")}</div>
+          <div class="r-title">${r.url ? `<a href="${esc(r.url)}">${esc(r.title)}</a>` : esc(r.title)}${r.video ? ` <a class="watch" href="${esc(r.video)}">▶ Video</a>` : ""}${r.slides ? ` <a class="watch slides" href="${esc(r.slides)}">Slides</a>` : ""}</div>
+          <div class="muted small">${[
+            r.authors && esc(r.authors),
+            byId[r.event] && esc(byId[r.event].short),
+            r.venue && `Presented at ${r.venueUrl ? `<a href="${esc(r.venueUrl)}">${esc(r.venue)}</a>` : esc(r.venue)}`,
+          ].filter(Boolean).join(" · ")}</div>
         </div>
       </li>`;
 
@@ -72,7 +76,7 @@
   $("event-filter").innerHTML =
     `<option value="all">All events</option>` +
     events.filter((e) => countFor(e.id)).map((e) => `<option value="${esc(e.id)}">${esc(e.short)}</option>`).join("") +
-    (D.resources.some((r) => !r.event) ? `<option value="none">General</option>` : "");
+    (D.resources.some((r) => !r.event) ? `<option value="none">Other venues</option>` : "");
 
   function render() {
     const q = state.q.toLowerCase();

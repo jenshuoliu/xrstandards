@@ -197,3 +197,4 @@ nav a:hover { color: var(--fg); text-decoration: none; }
   .brand img { height: 26px; }
   nav { gap: 10px; font-size: .82rem; }
 }
+.watch.slides { background: var(--accent-soft); color: var(--accent); }
