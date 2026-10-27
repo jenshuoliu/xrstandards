@@ -130,3 +130,74 @@ nav a:hover { color: var(--fg); text-decoration: none; }
 .watch { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 6px; font-size: .75rem; font-weight: 600; vertical-align: 2px; background: #fde8e8; color: #b42318; white-space: nowrap; }
 .watch:hover { text-decoration: none; filter: brightness(.97); }
 @media (prefers-color-scheme: dark) { .watch { background: #3a1d1d; color: #ff9b91; } }
+
+/* Theme map */
+:root {
+  --th-lifecycle: #c0392b; --th-interoperability: #2e6cc7; --th-reproducibility: #7a52b3;
+  --th-emerging: #4c9a2a; --th-terminology: #d9661f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --th-lifecycle: #ff8a7a; --th-interoperability: #82b1ff; --th-reproducibility: #c3a6f0;
+    --th-emerging: #8fd16a; --th-terminology: #ffae73;
+  }
+}
+.theme-lifecycle { --th: var(--th-lifecycle); }
+.theme-interoperability { --th: var(--th-interoperability); }
+.theme-reproducibility { --th: var(--th-reproducibility); }
+.theme-emerging { --th: var(--th-emerging); }
+.theme-terminology { --th: var(--th-terminology); }
+
+.section-lead { color: var(--muted); max-width: 680px; margin: -12px 0 24px; }
+.theme-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.theme-card {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 8px; text-align: left;
+  font: inherit; color: var(--fg); background: var(--bg); cursor: pointer;
+  border: 1px solid var(--line); border-top: 4px solid var(--th); border-radius: var(--radius); padding: 16px 14px;
+  transition: transform .15s, box-shadow .15s, background .15s;
+}
+.theme-card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0, 0, 0, .08); }
+.theme-card[aria-selected="true"] { background: color-mix(in srgb, var(--th) 10%, var(--bg)); border-color: var(--th); }
+.theme-icon { width: 28px; height: 28px; fill: none; stroke: var(--th); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.theme-title { font-weight: 700; line-height: 1.3; }
+.theme-count { font-size: .8rem; color: var(--muted); }
+
+.theme-panel {
+  margin-top: 16px; padding: 4px 24px 12px; border: 1px solid var(--th); border-left-width: 4px;
+  border-radius: var(--radius); scroll-margin-top: 80px;
+}
+.theme-panel h3 { color: var(--th); margin: 18px 0 4px; font-size: 1.2rem; }
+.theme-voices { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+.theme-voices ul { margin: 0 0 8px; padding-left: 18px; font-size: .92rem; }
+.voice-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 16px 0 6px; }
+.voice-label a { text-transform: none; letter-spacing: 0; font-weight: 600; }
+.theme-events { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+.theme-events a { padding: 3px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: .85rem; }
+
+.implications { margin-top: 24px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft); }
+.implications-title { margin: 0 0 12px; font-weight: 700; text-align: center; }
+.implications-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+.impl {
+  font: inherit; font-size: .88rem; font-weight: 600; color: var(--accent); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer;
+}
+.impl:hover { border-color: var(--accent); text-decoration: none; }
+.impl.goal { color: var(--fg); cursor: default; border-style: dashed; }
+.impl-note { margin-left: 4px; font-size: .7rem; color: var(--muted); }
+.impl-plus, .impl-arrow { color: var(--muted); font-weight: 700; }
+
+@media (max-width: 860px) {
+  .theme-grid { grid-template-columns: repeat(2, 1fr); }
+  .theme-voices { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .theme-grid { grid-template-columns: 1fr; }
+  .theme-card { flex-direction: row; align-items: center; }
+  .theme-count { margin-left: auto; }
+  .theme-panel { padding: 4px 16px 12px; }
+  .impl-plus, .impl-arrow { display: none; }
+}
+@media (max-width: 480px) {
+  .brand img { height: 26px; }
+  nav { gap: 10px; font-size: .82rem; }
+}
