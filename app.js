@@ -126,7 +126,7 @@
     interoperability: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
     reproducibility: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/>',
     emerging: '<path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',
-    terminology: '<path d="M4 5h16v11H9l-5 4z"/><path d="M9 9l3 4M12 9l-3 4M14 9v4h2"/>',
+    terminology: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9l3 4M11 9l-3 4M13 13V9h2a1.2 1.2 0 0 1 0 2.4h-2M14.8 11.4L16.2 13"/>',
   };
   const themes = D.themes || [];
   const tagged = (list, id) => list.filter((x) => (x.themes || []).includes(id));
